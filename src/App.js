@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Journeys } from './components/Journeys';
-// import { StationsList } from '';
+import { Stations } from './components/Stations';
 // import { StationDetails } from '';
 
 function App() {
@@ -13,13 +13,13 @@ function App() {
         <Header />
       </header>
       <Switch>
-        <Route path="">
+        <Route exact path="/">
           <Journeys />
         </Route>
-        {/* <Route path="">
-          <StationsList />
+        <Route path="/stations">
+          <Stations />
         </Route>
-        <Route path="">
+        {/* <Route path="">
           <StationDetails />
         </Route> */}
       </Switch>
