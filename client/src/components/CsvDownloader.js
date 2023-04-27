@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Papa from 'papaparse';
+import axios from 'axios';
 
 export const CsvDownloader = () => {
     // State to store parsed data
@@ -22,6 +23,7 @@ export const CsvDownloader = () => {
                 step: function(row, parser) {                  
                     if ((Number)(row.data["Covered distance (m)"]) > 10 && (Number)(row.data["Duration (sec.)"]) > 10) {
                         console.log("Row:", row.data);
+                        importData(row.data);
                         count++;
                         if (count > 10)
                             parser.pause();
@@ -34,6 +36,11 @@ export const CsvDownloader = () => {
         } catch (err) {
             console.log(err);
         }   
+    };
+
+    const importData = async (data) => {
+        const res = await axios.post("http://localhost:8800/journeys", data);
+        console.log(res.data);
     };
 
     return (

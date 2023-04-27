@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export const StationDetails = () => {
+
+    useEffect(() => {
+
+    });
+
     return (
         <div>
             <h2>Station name</h2>

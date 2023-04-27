@@ -14,21 +14,21 @@ function App() {
         <Header />
       </header>
       <main>
-      <Route path="/">
-          <StationDetails />
-      </Route>
+        <Switch>
+          <Route exact path="/">
+            <Journeys />
+          </Route>
+          <Route path="/stations">
+            <Stations />
+          </Route>
+          <Route path="/downloader">
+            <CsvDownloader />
+          </Route>
+          <Route path="/stations/:name">
+            <StationDetails />
+        </Route>
+        </Switch>
       </main>
-      <Switch>
-        <Route exact path="/">
-          <Journeys />
-        </Route>
-        <Route path="/stations">
-          <Stations />
-        </Route>
-        <Route path="/downloader">
-          <CsvDownloader />
-        </Route>
-      </Switch>
     </Router>
   );
 }
