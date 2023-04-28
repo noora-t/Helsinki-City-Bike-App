@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Header } from './components/Header';
+import { Home } from './components/Home';
 import { Journeys } from './components/Journeys';
 import { Stations } from './components/Stations';
 import { StationDetails } from './components/StationDetails';
@@ -13,6 +14,9 @@ function App() {
         <Header />
       <main>
         <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
           <Route path="/journeys">
             <Journeys />
           </Route>
