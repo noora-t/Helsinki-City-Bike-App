@@ -1,30 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import ToggleButton from '@mui/material/ToggleButton';
-import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+import { NavLink } from 'react-router-dom';
 
 export const Header = () => {
-    const [alignment, setAlignment] = React.useState('web');
-
-    const handleChange = (event, newAlignment) => {
-        setAlignment(newAlignment);
-    };
-
     return (
-        <div>
-            <h1>Helsinki City Bike App</h1>
-            <ToggleButtonGroup
-            color="primary"
-            value={alignment}
-            exclusive
-            onChange={handleChange}
-            aria-label="Platform"
-            >
-                <ToggleButton component={Link} to="/" value="journeys">Journeys</ToggleButton>
-                <ToggleButton component={Link} to="/stations" value="stations">Stations</ToggleButton>
-            </ToggleButtonGroup>
-        </div>
+        <header>
+            <h1 class="logo">Helsinki City Bike App</h1>
+            <nav>
+                <NavLink to="/journeys">Journeys</NavLink>
+                <NavLink to="/stations">Stations</NavLink>
+            </nav>
+        </header>
     );
 }
-
-

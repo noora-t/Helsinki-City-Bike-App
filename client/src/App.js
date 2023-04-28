@@ -10,19 +10,17 @@ import { CsvDownloader } from './components/CsvDownloader';
 function App() {
   return (
     <Router>
-      <header>
         <Header />
-      </header>
       <main>
         <Switch>
-          <Route exact path="/">
+          <Route path="/journeys">
             <Journeys />
-          </Route>
-          <Route path="/stations">
-            <Stations />
           </Route>
           <Route path="/downloader">
             <CsvDownloader />
+          </Route>
+          <Route exact path="/stations">
+            <Stations />
           </Route>
           <Route path="/stations/:name">
             <StationDetails />
