@@ -7,7 +7,7 @@ journeysRouter.get("/", (req, res) => {
     const q = `SELECT * FROM journeys WHERE journey_id BETWEEN ${req.query.min} AND ${req.query.max} AND distance_meters >= 10 AND duration_seconds >= 10`;
     db.query(q, (err, data) => {
         if (err) return res.json(err);
-        res.json(data);
+        return res.json(data);
     });
 });
 
@@ -26,7 +26,7 @@ journeysRouter.post("/", (req, res) => {
 
     db.query(q, [values], (err, data) => {
         if (err) return res.json(err);
-        res.json("Journey has been created successfully"); 
+        return res.json("Journey has been created successfully"); 
     });
 });
 
