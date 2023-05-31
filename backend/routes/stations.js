@@ -7,7 +7,7 @@ stationsRouter.get("/", (req, res) => {
     const q = "SELECT * FROM stations ORDER BY name_finnish ASC";
     db.query(q, (err, data) => {
         if (err) return res.json(err);
-        res.json(data);
+        return res.json(data);
     });
 });
 
@@ -15,7 +15,7 @@ stationsRouter.get("/:name", (req, res) => {
     const q = `SELECT s.name_finnish, s.address_finnish, count(j.departure_station_id) AS departure_count, count(o.return_station_id) AS return_count FROM stations s LEFT OUTER JOIN journeys j ON s.id = j.departure_station_id LEFT OUTER JOIN journeys o ON s.id = o.return_station_id WHERE s.name_finnish LIKE '${req.params.name}' GROUP BY s.name_finnish, s.address_finnish`;
     db.query(q, (err, data) => {
         if (err) return res.json(err);
-        res.json(data);
+        return res.json(data);
     });
 });
 
@@ -38,7 +38,7 @@ stationsRouter.post("/", (req, res) => {
 
     db.query(q, [values], (err, data) => {
         if (err) return res.json(err);
-        res.json("Station has been created successfully"); 
+        return res.json("Station has been created successfully"); 
     });
 });
 

@@ -10,9 +10,7 @@ export const StationDetails = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                console.log(`${API_ENDPOINT}/stations/${name}`);
                 const res = await axios.get(`${API_ENDPOINT}/stations/${name}`);
-                console.log(res.data);
                 setStation(res.data);
             } catch(err) {
                 console.log(err);
