@@ -1,16 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-describe("City Bike App tests", () => {
+describe("City Bike App", () => {
     test('renders header', () => {
-        
+        render(<App />);
+        const headerElement = screen.getByText(/Helsinki City Bike App/i);
+        expect(headerElement).toBeInTheDocument();
     });
 });
 
-//const output = screen.getByTestId("");
-//expect(output).toHaveTextContent("0");
-//data-testid=""
-// const incrementBttn = getByRole("button", { name: "Increment" });
-// fireEvent.click(incrementBttn);
-// expect(countValue).toEqual(1);
-//expect(header).toBeVisible();
+  

@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Helsinki city bike app (Dev Academy pre-assignment)
+This is the pre-assignment for the Solita Dev Academy Finland 2023.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Technologies used
+* React
+* MUI
+* Node
+* Express
+* MySQL
 
-## Available Scripts
+## How to run the project
 
-In the project directory, you can run:
+### 1. Create a database
 
-### `npm start`
+In the backend folder, you will find the db_script.sql file. Open it and copy all of its content. Open your SQL database in the terminal and paste the content of the file. The database is ready.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2. Configuration
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+In the client/api folder you will find index.js file and in the backend folder you will find .env file. You can change these values if needed:
 
-### `npm test`
+SERVER_URL (default is http://localhost:8800)
+SERVER_PORT (default is 8800)
+SERVER_HOST (default is localhost)
+DATABASE_NAME (default is citybikeapp)
+DATABASE_USER (the username of your database)
+DATABASE_PASSWORD (the password of your database)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 3. Install npm packages
 
-### `npm run build`
+Go into the base, client and backend folders one by one and write the following command in the console: npm i
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 4. Data
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Import dumped database from: https://drive.google.com/file/d/1Kbjd57ZFofJgz7aL-H_lzVg2u_9FfbVf/view?usp=sharing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 5. Run backend and frontend
+To run both frontend and backend, go to the base city-bike-app folder and run the command: npm run dev
+By default backend will be run on the http://localhost:8800/ and frontend on the http://localhost:3000/
 
-### `npm run eject`
+### Front-end
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<img width="300" alt="1" src="./Images/photo1.PNG"> <img width="300" alt="1" src="./Images/chooseweapon.PNG"> 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img width="300" alt="1" src="./Images/photo2.PNG"> <img width="300" alt="1" src="./Images/chooseweapon.PNG">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img width="300" alt="1" src="./Images/photo3.PNG"> <img width="300" alt="1" src="./Images/chooseweapon.PNG">

@@ -1,10 +1,13 @@
 import { Header } from './Header';
+import '@testing-library/jest-dom';
 
 describe(Header, () => {
-    it('should...', () => {
-        
+    test('routes to journeys page', async () => {
+
+    });
+
+    test('routes to stations page', async () => {
+
     });
 });
 
-// Should display header, navlinks
-// navlinks should work
