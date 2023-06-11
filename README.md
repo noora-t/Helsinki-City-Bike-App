@@ -57,3 +57,4 @@ By default backend will be run on the http://localhost:8800/ and frontend on the
 <img width="500" alt="1" src="./client/Images/photo1.PNG">
 
 <img width="500" alt="2" src="./client/Images/photo2.PNG">
+
